@@ -1,6 +1,6 @@
 ## For Coursera Data Science: R Programming, 3rd Week 
 ## Beginning on 16th April 2020 by RAHUL JHA
- 
+
 
 ## The function is written for Peer-Graded Assignment 
 ## For a pair of functions that cache the inverse of a matrix.
@@ -23,7 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
   setinverse <- function(inverse) ivr <<- inverse
   getinverse <- function() ivr
   list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
-       
+  
 }
 
 ## "cacheSolve" Function
@@ -40,11 +40,12 @@ cacheSolve <- function(x, ...) {
   if(!is.null(ivr)) {
     message("getting cached data")
     return(ivr)
-  
+    
   }
   
   data <- x$get()
   ivr <- solve(data, ...)
   x$setinverse(ivr)
   ivr
+  
 }
