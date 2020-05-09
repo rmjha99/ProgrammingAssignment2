@@ -47,5 +47,4 @@ cacheSolve <- function(x, ...) {
   ivr <- solve(data, ...)
   x$setinverse(ivr)
   ivr
-  
 }
